@@ -1,5 +1,7 @@
 # Fraud Detection Application Setup and Usage Guide
 
+Fraud Detection Application Cloud Portal: https://capstone-fraud-detection.onrender.com 
+
 This document provides step-by-step instructions to install, build, and run a Flask-based web application designed to upload CSV transaction files, detect fraudulent transactions, and allow humans verification. The application consists of a home page for file uploads (index.html), a verification page for flagged transactions (verify.html), an error page for handling issues (error.html), and a consistent styling file (styles.css).
 
 ### Prequisites
