@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="error-page">
+    <div class="error-container">
+        <h1>Error</h1>
+        <p>{{ error_message }}</p>
+        <a href="/" class="home-button">Return to Home</a>
+    </div>
+</body>
+</html>

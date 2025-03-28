@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction Upload</title>
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Upload Transaction Document</h1>
+    <p class="upload-text">Please upload transaction document (CSV file):</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file" accept=".csv">
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

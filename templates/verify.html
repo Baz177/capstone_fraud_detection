@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Fraudulent Transactions</title>
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="verify-page">
+    <div class="verify-container">
+        <h1>Verify Fraudulent Transactions</h1>
+        {% if transactions %}
+            <p>Please verify the following {{ transactions|length }} transactions flagged as fraudulent:</p>
+            <form action="/verify" method="post" onsubmit="this.querySelector('button').innerText='Submitting...'">
+                <table>
+                    <thead>
+                        <tr>
+                            {% for key in transactions[0].keys() %}
+                                <th>{{ key }}</th>
+                            {% endfor %}
+                            <th>Verify</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for transaction in transactions %}
+                            <tr>
+                                {% for key, value in transaction.items() %}
+                                    <td data-label="{{ key }}">{{ value }}</td>
+                                    <input type="hidden" name="{{ key }}_{{ loop.index0 }}" value="{{ value }}">
+                                {% endfor %}
+                                <td data-label="Verify">
+                                    <input type="radio" name="verify_{{ loop.index0 }}" value="yes" required> Yes
+                                    <input type="radio" name="verify_{{ loop.index0 }}" value="no"> No
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <button type="submit">Submit Verifications</button>
+            </form>
+        {% else %}
+            <p class="upload-text">No fraudulent transactions detected. All transactions have been logged as legitimate.</p>
+            <a href="/" class="upload-next-button">Upload Next Batch</a>
+        {% endif %}
+    </div>
+</body>
+</html>
