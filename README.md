@@ -46,10 +46,11 @@ Fraud-detection-app
 
 ### Installation and Setup 
 ##### Step 1: Create Project Directory (e.g: fraud-detection-app) 
-1. Dowloand all folders and files
-2. Create a directory system as above in your created folder
-3. Open your text Editor and Navigate to your folder. 
-4. Ensure the directory is set up as above
+1. Create a new folder 
+2. Dowloand all folders and files
+3. Create a directory system as above in your created folder
+4. Open your text Editor and Navigate to your folder. 
+5. Ensure the directory is set up as above
 
 ##### Step 2: Set Up a Virtual Environment
 1. Open you terminal
