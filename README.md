@@ -48,13 +48,14 @@ Fraud-detection-app
 ##### Step 1: Create Project Directory (e.g: fraud-detection-app) 
 1. Dowloand all folders and files
 2. Create a directory system as above in your created folder
-3. Open you terminal in the text Editor and Navigate to your folder. 
+3. Open your text Editor and Navigate to your folder. 
 4. Ensure the directory is set up as above
 
 ##### Step 2: Set Up a Virtual Environment
-1. Create a virtual environment:
+1. Open you terminal
+2. Create a virtual environment:
     -  Windows: python -m venv venv
-2. Activate it:
+3. Activate it:
     - Windows: venv\Scripts\activate
     - macOS/Linux: source venv/bin/activate
     - You should see (venv) in your prompt.
@@ -90,14 +91,16 @@ If the CSV is valid and contains fraudulent transactions (fraud == 1):
   - You’ll be redirected to the verification page (/verify).
   - A table displays flagged transactions 
   - For each row, select "Yes" or "No" to verify fraud.
-  - Click "Submit Verifications" (Note: This route isn’t implemented here; see "Next Steps").
+  - Click "Submit Verifications" 
 If no fraudulent transactions are detected:
   - You’ll see a message: "No fraudulent transactions detected."
 
 ##### Step 3: Handle Errors
 If there’s an issue (e.g., no file, invalid CSV):
-- You’ll see the error page with a message (e.g., "CSV missing required columns").
+- You’ll see the error page with a message (e.g., "CSV missing required columns", "No file selected" etc.).
 - Click "Return to Home" to try again.
+
+##### Retraining: You will be prompted to retrain the model after a certain number of entries have been logged. 
 
 ### Troubleshooting
 - 404 Errors: Ensure all routes (/, /upload) are defined in server.py.
